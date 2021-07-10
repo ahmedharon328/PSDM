@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSD2HTML</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="Stylesheet" href="css/normalise.css"  type="text/css">>
-    <link rel="Stylesheet" href="css/style.css"  type="text/css">>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="Stylesheet" href="css/normalise.css"  type="text/css">
+    <link rel="Stylesheet" href="css/style.css"  type="text/css">
 </head>
 <body>
     <!-- Head Start-->
-    <div class="header" >
+    <div class="header" data-nav="Home">
         <div class="slider">
+            <button id="button" onclick="myFunction()">Top <i class="fa fa-arrow-up"></i></button>
             <div class="contanier">
                 <div class="intro">
                     <h2>Web &amp; Graphic Design</h2>
@@ -20,17 +22,17 @@
                 </div>
             </div>
         </div>  
-            <div class="navbar">
+            <div class="navbar" id="taskbar">
                 <div class="contanier">
                     <h2>Ha<span>ron</span></h2>
-                    <ul>
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About me</a></li>
-                        <li><a href="#">Skills</a></li>
-                        <li><a href="#">Resume</a></li>
-                        <li><a href="#">Testemonials</a></li>
-                        <li><a href="#">Portoflio</a></li>
-                        <li><a href="#">Contact me</a></li>
+                    <ul id="tags">
+                        <li data-set="Home"><a>Home</a></li>
+                        <li data-set="About me"><a>About me</a></li>
+                        <li data-set="Skills"><a>Skills</a></li>
+                        <li data-set="Resume"><a>Resume</a></li>
+                        <li data-set="Testemonials"><a>Testemonials</a></li>
+                        <li data-set="Portoflio"><a>Portoflio</a></li>
+                        <li data-set="Contact me"><a>Contact me</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +40,7 @@
     <!--Head End -->
 
     <!-- Feature Start -->
-    <div class="features">
+    <div class="features" data-nav="About me">
         <div class="contanier">
             <div class="feat">
                  <h2>Values</h2>
@@ -61,9 +63,9 @@
 
 
     <!-- Feature End -->
-
+ 
     <!-- Start About Me -->
-        <div class="about-me">
+        <div class="about-me" >
             <div class="contanier">
                 <div class="image">
                     <img src= "images/Ghost.jpg" alt="Ghosts">
@@ -118,7 +120,7 @@
 
 
      <!-- Start My Skills -->
-        <div  class="my-skills">
+        <div  class="my-skills" data-nav="Skills">
             <div class="contanier">
                 <div class="skills">
                     <h2>My Skills</h2>
@@ -157,7 +159,7 @@
 
        <!-- Start resume -->
 
-       <div class="resume">
+       <div class="resume" data-nav="Resume">
            <div class="contanier">
                <h2>Resume</h2>
                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet rerum adipisci corrupti explicabo cum, eaque recusandae ducimus voluptatum odit error dignissimos Nemo numquam ullam praesentium nulla unde eius sint laudantium pariatur tenetur sunt?  </p>
@@ -167,7 +169,7 @@
        <!-- End resume-->
 
         <!-- Start Education -->
-            <div class="my-education">
+            <div class="my-education" >
                 <div class="contanier">
                     <div class="main">
                         <h2>My Education</h2>
@@ -230,7 +232,7 @@
 
          <!-- Start Testmonials-->
 
-       <div class="testmonials">
+       <div class="testmonials" data-nav="Testemonials">
         <div class="contanier">
             <q>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi ratione porro nihil id, quod consequuntur. Rerum veritatis sapiente optio eius, voluptatum eum quibusdam. Adipisci nobis, necessitatibus inventore in praesentium perspiciatis? adipisicing elit. Expedita in eos obcaecati nemo nisi, iure harum. Iusto animi, veritatis qui quo, explicabo adipisci repellat tempore totam, facilis nostrum voluptatum autem?</q>
             <h2>Ahmed Haron</h2>
@@ -245,7 +247,7 @@
     <!-- End Testmonials-->
 
      <!-- Start Portfolio-->
-     <div class="portfolio">
+     <div class="portfolio" data-nav="Portoflio">
          <div class="contanier">
                  <h2>Portfolio</h2>
                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias rem at id unde repellat, pariatur nemo similique alias perspiciatis et modi eveniet. Modi, atque! Facilis est doloribus fuga vel voluptates.</p>
@@ -267,7 +269,7 @@
 
 
       <!-- Start Contact me-->
-     <div class="contact-me">
+     <div class="contact-me" data-nav="Contact me">
          <div class="contanier">
              <div class="info">
                  <h2>Contact Me</h2>
@@ -282,22 +284,22 @@
                 <label for="Phone"><strong> Phone:</strong></label>
                 <span>01097351579</span>
              </div>
-             <div class="form">
+             <form class="form" >
                 <label for="name">Name*</label>
-                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Name" required>
 
                 <label for="Email Address">Email Address*</label>
-                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Email" required>
 
                 <label for="Phone">Phone*</label>
-                <input type="text" placeholder="Phone">
+                <input type="text" placeholder="Phone" required>
 
                 <label for="Review">Review*</label>
-                <textarea placeholder="Your Review"></textarea>
+                <textarea placeholder="Your Review" required></textarea>
 
                 <input type="submit" value="Contact Me">
 
-             </div>
+             </form>
          </div>
      </div>
       
@@ -321,5 +323,8 @@
     </div>
 
       <!-- End Footer-->  
+
+
+      <script src="js/app.js"></script>
 </body>
 </html>

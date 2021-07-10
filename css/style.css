@@ -6,10 +6,27 @@ body{
 
 /*Header  Start  */
 
+
+
 .header .slider{
     background-image: url(../images/Tokyo-RainbowBridge-1400x600.jpg);
     background-size: cover;
     height: 870px;
+}
+
+.header .slider >button{
+    position:fixed;
+    right: 30px;
+    bottom: 30px;
+    padding: 10px 20px;
+    border: none;
+    background: #555;
+    color: #FFF;
+    display: none;
+}
+
+.header .slider >button:hover{
+    color: #2ecc79;
 }
 
 .header .slider .intro{text-align: center; color: #FFF; padding-top: 350px;}
@@ -40,6 +57,7 @@ body{
     background-color: #252F31;
     color: #fff;
     overflow: hidden;
+    position: relative;
 }
 
 .header .navbar h2{float: left; }
@@ -51,14 +69,17 @@ body{
     padding-left: 0px;
     float: right;
 }
-.header .navbar ul li {float: left;padding:10px;}
+.header .navbar ul li {float: left;padding:10px;} 
 
-.header .navbar ul li a{color: #fff;text-decoration: none;}
+.header .navbar ul li:hover,
+.header .navbar ul li.active{background: #555; transition: 3ms ease-in all;}
 
-.header .navbar ul li.active a,
-.header .navbar ul li a:hover{
-    color:#2ecc71;   
-}
+.header .navbar ul li a{color: #fff;text-decoration: none; cursor: pointer;}
+
+
+.header .navbar ul li a:hover{ color:#2ecc71; }
+
+.header .navbar ul li.active a{color:#2ecc71}
 
 /*Header  End */
 
@@ -350,6 +371,7 @@ body{
     color:#EEE; 
     text-transform: uppercase;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 
@@ -379,4 +401,7 @@ body{
 
 
 /* End footer*/
+
+/* Framework*/
+button{cursor: pointer;}
 

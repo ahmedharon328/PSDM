@@ -26,13 +26,13 @@
                 <div class="contanier">
                     <h2>Ha<span>ron</span></h2>
                     <ul id="tags">
-                        <li data-set="Home"><a>Home</a></li>
-                        <li data-set="About me"><a>About me</a></li>
-                        <li data-set="Skills"><a>Skills</a></li>
-                        <li data-set="Resume"><a>Resume</a></li>
-                        <li data-set="Testemonials"><a>Testemonials</a></li>
-                        <li data-set="Portoflio"><a>Portoflio</a></li>
-                        <li data-set="Contact me"><a>Contact me</a></li>
+                        <li><a>Home</a></li>
+                        <li><a>About me</a></li>
+                        <li><a>Skills</a></li>
+                        <li><aResume</a></li>
+                        <li><a>Testemonials</a></li>
+                        <li><a>Portoflio</a></li>
+                        <li><a>Contact me</a></li>
                     </ul>
                 </div>
             </div>
@@ -234,13 +234,16 @@
 
        <div class="testmonials" data-nav="Testemonials">
         <div class="contanier">
-            <q>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi ratione porro nihil id, quod consequuntur. Rerum veritatis sapiente optio eius, voluptatum eum quibusdam. Adipisci nobis, necessitatibus inventore in praesentium perspiciatis? adipisicing elit. Expedita in eos obcaecati nemo nisi, iure harum. Iusto animi, veritatis qui quo, explicabo adipisci repellat tempore totam, facilis nostrum voluptatum autem?</q>
+            <q data-set="first-q" class="first">The greatest glory in living lies not in never falling, but in rising every time we fall. - ...The way to get started is to quit talking and begin doing. -Your time is limited, so don't waste it living someone else's life. ...If life were predictable it would cease to be life, and be without flavor. -Life is what happens when you're busy making other plans --The way to get started is to quit talking and begin doing. -Walt Disney</q>
+            <q data-set="second-q" class="second">Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking. -Steve Jobs If life were predictable it would cease to be life, and be without flavor. -Eleanor RooseveltIf you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough. -Oprah Winfrey</q>
+            <q data-set="third-q" class="third">Do not go where the path may lead, go instead where there is no path and leave a trail. -Ralph Waldo EmersonIt is during our darkest moments that we must focus to see the light. -AristotleThe best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart. -Helen Kellerell me and I forget. Teach me and I remember. Involve me and I learn. -Benjamin FranklinWhoever is happy will make others happy too. -Anne Frank</q>
+            <q data-set="fourth-q" class="fourth">Spread love everywhere you go. Let no one ever come to you without leaving happier." -Mother TeresaAlways remember that you are absolutely unique. Just like everyone else." -Margaret MeadThe future belongs to those who believe in the beauty of their dreams." -Eleanor RooseveltThe best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart </q>
             <h2>Ahmed Haron</h2>
             <ul>
-                <li></li>
-                <li class="active"></li>
-                <li></li>
-                <li></li>
+                <li data-list="first-q"></li>
+                <li data-list="second-q"></li>
+                <li data-list="third-q"></li>
+                <li data-list="fourth-q"></li>
             </ul>
         </div>
     </div>
@@ -252,15 +255,15 @@
                  <h2>Portfolio</h2>
                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias rem at id unde repellat, pariatur nemo similique alias perspiciatis et modi eveniet. Modi, atque! Facilis est doloribus fuga vel voluptates.</p>
              <div class="our-work">
-                 <div><img src="images/EJuyR-rWwAAF703.png" alt="React"></div>
-                 <div><img src="images/Java.jpg" alt="JavaScript"></div>
-                 <div><img src="images/books-library.net-1611348216-176.jpg" alt="HTML5"></div>
-                 <div><img class="active" src="images/java.png" alt="JavaScript"></div>
-                 <div><img src="images/1_yM5Ac4DqYbJvUisqvqLRGg.jpeg" alt="NodeJS"></div>
-                 <div><img src="images/API-300x300.jpg" alt="API"></div>
-                 <div><img src="images/open-banking.jpg" alt="API"></div>
-                 <div><img src="images/json-viewer.png" alt="JSON"></div>
-                 <div><img src="images/HTML.png" alt="test"></div>
+                 <div><img class="zoom" src="images/EJuyR-rWwAAF703.png" alt="React"></div>
+                 <div><img class="zoom" src="images/Java.jpg" alt="JavaScript"></div>
+                 <div><img class="zoom" src="images/books-library.net-1611348216-176.jpg" alt="HTML5"></div>
+                 <div><img class="zoom active" src="images/java.png" alt="JavaScript"></div>
+                 <div><img class="zoom" src="images/1_yM5Ac4DqYbJvUisqvqLRGg.jpeg" alt="NodeJS"></div>
+                 <div><img class="zoom" src="images/API-300x300.jpg" alt="API"></div>
+                 <div><img class="zoom" src="images/open-banking.jpg" alt="API"></div>
+                 <div><img class="zoom" src="images/json-viewer.png" alt="JSON"></div>
+                 <div><img class="zoom" src="images/HTML.png" alt="test"></div>
              </div>
          </div>
      </div>
@@ -311,20 +314,19 @@
         <div class="contanier">
             <p>Copyright @copy: 2020 Haron  </p>
             <ul>
-                <li><i class="fab fa-twitter "></i> </li>
-                <li><i class="fab fa-linkedin-in "></i></li>
-                <li><i class="fab fa-facebook-f "></i></li>
-                <li><i class="fab fa-instagram-square fa-2x"></i></li>
-                <li><i class="fab fa-youtube fa-2x"></i></li>
-                <li><i class="fab fa-steam fa-2x"></i></li>
-                <li><i class="fas fa-blog fa-2x"></i></li>
+                <li><a href="https://twitter.com/MessiHaron" target="_blank"><i class="fab fa-twitter "></i></a> </li>
+                <li><a href="https://www.linkedin.com/in/ahmed-haron-3a7415205/" target="_blank"><i class="fab fa-linkedin-in "></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100003141436058" target="_blank"><i class="fab fa-facebook-f "></i></a></li>
+                <li><a href="https://www.instagram.com/ahmedibrahimharon/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCtBR1dDY2IBkIXOKlvRj4Aw" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></li>
+                <li><a href="https://store.steampowered.com/" target="_blank"><i class="fab fa-steam fa-2x"></i></a></li>
             </ul>
         </div>
     </div>
 
       <!-- End Footer-->  
 
-
+      <script src="node_modules/medium-zoom/dist/medium-zoom.min.js"></script>
       <script src="js/app.js"></script>
 </body>
 </html>

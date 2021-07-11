@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     height: 4000px;
     margin: 0px;
@@ -233,7 +237,6 @@ body{
     font-weight: bold;
     padding: 5px 7px;
     font-size: 12px;
-    cursor: zoom-in;
 }
 
 .my-education .exp hr {
@@ -267,6 +270,12 @@ body{
     font-size: 17px;
 }
 
+.testmonials .second,
+.testmonials .third,
+.testmonials .fourth{
+    display: none;
+}
+
 .testmonials h2 {color: #555;}
 
 .testmonials ul {text-align: center;padding-left: 0;list-style: none;}
@@ -278,9 +287,14 @@ body{
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    
+}
+.testmonials ul li.active{
+    background-color: #2ecc71;
 }
 
-.testmonials ul li.active,
+
+
 .testmonials ul li:hover{
     background-color: #2ecc71;
 }
@@ -299,7 +313,6 @@ body{
     padding-left: 120px;
 }
 
-
 .portfolio .our-work{overflow: hidden;    }
 
 .portfolio .our-work > div{float: left;width: 33%; margin-bottom:18px ;}
@@ -311,6 +324,9 @@ body{
     box-shadow: 10px 10px 10px 10px #ccc;
 }
 .portfolio .our-work > div img.active{border-radius: 25px;}
+.portfolio .our-work > div img:hover{
+    transform: scale(1.1);
+}
 
 /* End Portfolio*/
 
@@ -388,12 +404,15 @@ body{
 
 .footer ul {list-style: none;margin-right: 30px;}
 
-.footer ul li { display: inline-block;}
+.footer ul li { display: inline-block; color: none; color: #666;}
 
 .footer ul li i{
     margin-left: 10px;
     font-size: 25px;
+    color: #666;
 }
+.footer ul li a {color: #666;}
+.footer ul li a:visited{color: #666;}
 
 .footer ul li i:hover{
     color: #FFF;

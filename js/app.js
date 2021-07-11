@@ -3,6 +3,9 @@ const divs = document.querySelectorAll('div')
 const links = document.querySelectorAll('a');
 const btn = document.getElementById('button')
 const taskBar = document.getElementById('taskbar')
+const testmon = document.querySelectorAll('.testmonials ul li')
+const qoutes =  document.querySelectorAll('.testmonials div q')
+console.log(qoutes)
 
 // To Scroll smoothly to the specfic element
 links.forEach((link) =>{
@@ -21,9 +24,32 @@ links.forEach((link) =>{
     })
 })
 
+//add active class to list
+
+testmon.forEach((list) =>{
+    const myList = list.getAttribute('data-list')
+    list.addEventListener("click", (evt)=>{
+        testmon.forEach(nlist =>{
+            nlist.classList.remove('active')
+        })
+        list.classList.add('active');
+
+        qoutes.forEach(quote =>{
+            const myQuote= quote.getAttribute('data-set')
+            if(myList == myQuote){
+                quote.style.display='block'
+            }else{
+                quote.style.display='none'
+            }
+        })
+    })
+})
+
+
 //To click on button
 function myFunction(){
-    document.documentElement.scrollTop=0
+    document.documentElement.scrollTop=0;
+    
 }
 window.addEventListener('scroll', ()=>{
     if (document.documentElement.scrollTop > 870){
@@ -49,5 +75,14 @@ window.addEventListener('scroll', ()=>{
         }
     }
     
+})
+
+//Zoom in/out pic
+
+
+mediumZoom('.zoom',{
+    margin:-100,
+    background:"linear-gradient(to right, black,blue)",
+    scrollOffset:20
 })
 

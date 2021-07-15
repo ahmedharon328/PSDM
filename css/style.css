@@ -175,15 +175,28 @@ body{
 
 .my-skills .progress .tech h3 {color: #555;}
 
-.my-skills .progress .tech div {background-color: #F2F2F2;height: 25px;}
+.my-skills .progress .tech div {background-color: #F2F2F2;height: 25px; border-radius: 7px;}
 
 .my-skills .progress .tech div span {
-    background-color:#2DCC70;
+    background-color:#00aeef;
     height: 25px;
     display: block;
     line-height: 25px;
     text-align: right;
     color:#FFF;
+    border-radius: inherit;
+    font:bold 20px;
+    display: none;
+}
+
+.my-skills .progress button{
+    margin-top: 50px;
+    margin-left: 300px;
+    background: none;
+    padding: 12px 30px ;
+    border: 3px solid #2DCC78;
+    color: #2DCC78;
+    font-weight: bold;
 }
 
 /*Skills End */
@@ -269,7 +282,6 @@ body{
     font-style: italic;
     font-size: 17px;
 }
-
 .testmonials .second,
 .testmonials .third,
 .testmonials .fourth{
@@ -278,26 +290,54 @@ body{
 
 .testmonials h2 {color: #555;}
 
-.testmonials ul {text-align: center;padding-left: 0;list-style: none;}
+.testmonials ul {text-align: center;padding-left: 0;}
 
-.testmonials ul li {
-    height: 15px;
-    width: 15px;
-    border: 2px solid #2ecc71 ;
-    border-radius: 50%;
+.testmonials .radio-btn{
     display: inline-block;
+    position: relative;
     cursor: pointer;
-    
 }
-.testmonials ul li.active{
-    background-color: #2ecc71;
+.radio-btn + .radio-btn{
+    margin-left: 20px;
+}
+
+.radio-btn input[type="radio"]{
+    display: none;
+}
+
+.radio-btn span {
+    height: 20px;
+    width: 20px;
+    border: 3px solid #00aeef ;
+    border-radius: 50%;
+    display: block; 
+    cursor: pointer;
+    transition: 1s;
+}
+
+.radio-btn span::before{
+    content: "";
+    height: 13px;
+    width: 13px;
+    background:#00aeef;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50% ,-50%) scale(0);
+    transition: 300ms ease-in-out 0s;
 }
 
 
-
-.testmonials ul li:hover{
-    background-color: #2ecc71;
+.radio-btn input[type="radio"]:checked ~ span::before{
+    transform: translate(-50% ,-50%) scale(1);
 }
+
+span:hover{
+    background:#00aeef ;
+}
+
 
 /* End Testmonials*/
 
@@ -322,10 +362,12 @@ body{
     margin-bottom: 20px;
     border: 1px solid #999;
     box-shadow: 10px 10px 10px 10px #ccc;
+    filter: grayscale(70%);
 }
 .portfolio .our-work > div img.active{border-radius: 25px;}
 .portfolio .our-work > div img:hover{
     transform: scale(1.1);
+    filter: grayscale(0);
 }
 
 /* End Portfolio*/
@@ -423,4 +465,29 @@ body{
 
 /* Framework*/
 button{cursor: pointer;}
+
+/*Animation*/
+
+@keyframes javaScript{
+    0%{width: 0;}
+    70% {width: 70%;}    
+}
+
+@keyframes NodeJS{
+    0%{width:0}
+    60% {width: 60%;}
+}
+
+@keyframes HTML{
+    0%{width: 0;}
+    90%{width: 90%;}
+}
+
+@keyframes SQL{
+    0%{width: 0;}
+    80%{width: 80%;}
+}
+
+
+
 

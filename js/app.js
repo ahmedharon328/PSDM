@@ -3,9 +3,33 @@ const divs = document.querySelectorAll('div')
 const links = document.querySelectorAll('a');
 const btn = document.getElementById('button')
 const taskBar = document.getElementById('taskbar')
-const testmon = document.querySelectorAll('.testmonials ul li')
+const testmon = document.querySelectorAll('.testmonials ul label span')
 const qoutes =  document.querySelectorAll('.testmonials div q')
-console.log(qoutes)
+const myButton = document.getElementById('myButton');
+const input = document.querySelectorAll('.testmonials input')
+console.log(input[1])
+
+
+const view = ()=>{
+    const span = document.querySelectorAll('.tech div span');
+    span.forEach((item)=>{
+        var width = 1;
+        var itemWidth = item.style.width
+        var noPrecent = itemWidth.replace("%",'')
+       var id = setInterval(() => {
+            if (width >= noPrecent ){
+                clearInterval(id)
+            }
+            else{
+                width ++;
+                item.innerHTML = width*1 +'%'
+            }       
+            }, 50);
+        item.style.display="block"
+    })
+    const button = document.getElementById('doSomething').disabled = true
+}
+
 
 // To Scroll smoothly to the specfic element
 links.forEach((link) =>{
@@ -24,19 +48,14 @@ links.forEach((link) =>{
     })
 })
 
+
 //add active class to list
-
-testmon.forEach((list) =>{
-    const myList = list.getAttribute('data-list')
-    list.addEventListener("click", (evt)=>{
-        testmon.forEach(nlist =>{
-            nlist.classList.remove('active')
-        })
-        list.classList.add('active');
-
+testmon.forEach((span) =>{
+    const myspan = span.getAttribute('data-radio')
+    span.addEventListener("click", (evt)=>{
         qoutes.forEach(quote =>{
             const myQuote= quote.getAttribute('data-set')
-            if(myList == myQuote){
+            if(myspan == myQuote){
                 quote.style.display='block'
             }else{
                 quote.style.display='none'
@@ -44,6 +63,32 @@ testmon.forEach((list) =>{
         })
     })
 })
+
+function clicked(){
+var counter = 1
+    setInterval(() => {
+        document.getElementById('radio'+counter).checked = true
+        if(input[0].checked ){
+            qoutes[3].style.display="none"
+            qoutes[0].style.display="block"
+        }else if(input[1].checked ){
+            qoutes[0].style.display="none"
+            qoutes[1].style.display="block"
+        }else if(input[2].checked){
+            qoutes[1].style.display="none"
+            qoutes[2].style.display="block"
+        }else if(input[3].checked){
+            qoutes[2].style.display="none"
+            qoutes[3].style.display="block"
+        }
+        counter++
+        if(counter > 4){
+            counter = 1
+        } 
+    }, 3000);
+}
+
+clicked()
 
 
 //To click on button

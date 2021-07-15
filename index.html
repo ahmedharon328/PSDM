@@ -131,26 +131,29 @@
                 <div class="progress">
                     <div class="tech">
                         <h3>JavaScript</h3>
-                        <div>
-                            <span style="width:70%;">70% &nbsp;</span>
+                        <div id="percent"> 
+                            <span style="animation: javaScript 5s forwards; width: 70%;" > &nbsp;</span>
                         </div>
                     </div>
                     <div class="tech">
                         <h3>NodeJS</h3>
                         <div>
-                            <span style="width:60%;"> 60% &nbsp;</span>
+                            <span style=" animation:NodeJS 5s forwards;width:60%;" >  &nbsp;</span>
                         </div>
                     </div>
                     <div class="tech">
                         <h3>HTML/CSS</h3>
-                        <div><span style="width: 90%;">90% &nbsp;</span></div>
+                        <div>
+                            <span style="animation:HTML 5s forwards; width: 90%; "> &nbsp;</span>
+                        </div>
                     </div>
                     <div class="tech">
                         <h3>GIT/MYSQL</h3>
                         <div>
-                            <span style="width: 90%;">80% &nbsp;</span>
+                            <span style="width: 80%;  animation:SQL 5s forwards"> &nbsp;</span>
                         </div>
                     </div>
+                    <button onclick="view()" id="doSomething" >View SKills</button>
                 </div>
             </div>
         </div>
@@ -240,10 +243,22 @@
             <q data-set="fourth-q" class="fourth">Spread love everywhere you go. Let no one ever come to you without leaving happier." -Mother TeresaAlways remember that you are absolutely unique. Just like everyone else." -Margaret MeadThe future belongs to those who believe in the beauty of their dreams." -Eleanor RooseveltThe best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart </q>
             <h2>Ahmed Haron</h2>
             <ul>
-                <li data-list="first-q"></li>
-                <li data-list="second-q"></li>
-                <li data-list="third-q"></li>
-                <li data-list="fourth-q"></li>
+                <label for="radio1" class="radio-btn">
+                    <input type="radio" name="quote" id="radio1" value="first" >
+                    <span data-radio="first-q"></span>
+                </label>
+                <label for="radio2" class="radio-btn">
+                    <input type="radio" name="quote" id="radio2" value="second">
+                    <span data-radio="second-q"></span>
+                </label>
+                <label for="radio3" class="radio-btn">
+                    <input type="radio" name="quote" id="radio3" value="third">
+                    <span data-radio="third-q"></span>
+                </label>
+                <label for="radio4" class="radio-btn">
+                    <input type="radio" name="quote" id="radio4" value="fourth">
+                    <span data-radio="fourth-q"></span>
+                </label>
             </ul>
         </div>
     </div>
